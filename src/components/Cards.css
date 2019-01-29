@@ -1,0 +1,50 @@
+div.container {
+    width: auto;
+    display: inline-flex;
+    padding-left: 2%;
+    padding-top: 2%;
+}
+.front {
+    display: inline;
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 2%;
+    font-size: 60px;
+    position: absolute;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+.back {
+    background-color: green;
+    z-index: -1;
+    display: inline;
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 8%;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: 0.6s;
+}
+.flip-card {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1%;
+}
+
+.Card--flipped {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: 0.6s;
+}
+.Card--noFlipped {
+    transition: 0.6s;
+}
