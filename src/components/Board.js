@@ -7,20 +7,25 @@ class Board extends React.Component {
         super(props);
         this.state = {
             cards: [
-                {classname: 'Card--noFlipped', id:2, img: '/images/babel.png', isFlipped: true},
-                {classname: 'Card--noFlipped', id:1, img: '/images/angular2.png', isFlipped: true},
-                {classname: 'Card--noFlipped', id:3, img: '/images/css3.png', isFlipped: true},
-                {classname: 'Card--noFlipped', id:4, img: '/images/html.png', isFlipped: true},
-                {classname: 'Card--noFlipped', id:5, img: '/images/nodejs.png', isFlipped: true},
-                {classname: 'Card--noFlipped', id:6, img: '/images/react.png', isFlipped: true},
-                {classname: 'Card--noFlipped', id:7, img: '/images/vue.png', isFlipped: true},
-                {classname: 'Card--noFlipped', id:8, img: '/images/angular2.png', isFlipped: true},
-                {classname: 'Card--noFlipped', id:9, img: '/images/babel.png', isFlipped: true},
-                {classname: 'Card--noFlipped', id:10, img: '/images/css3.png', isFlipped: true},
-                {classname: 'Card--noFlipped', id:11, img: '/images/html.png', isFlipped: true},
-                {classname: 'Card--noFlipped', id:12, img: '/images/nodejs.png', isFlipped: true},
-                {classname: 'Card--noFlipped', id:13, img: '/images/react.png', isFlipped: true},
-                {classname: 'Card--noFlipped', id:14, img: '/images/vue.png', isFlipped: true},
+                {classname: 'Card--noFlipped', id:1, img: '/images/angular2.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:2, img: '/images/babel.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:3, img: '/images/css3.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:4, img: '/images/html.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:5, img: '/images/nodejs.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:6, img: '/images/react.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:7, img: '/images/vue.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:8, img: '/images/gulp.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:9, img: '/images/yarn.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:10, img: '/images/angular2.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:11, img: '/images/babel.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:12, img: '/images/css3.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:13, img: '/images/html.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:14, img: '/images/nodejs.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:15, img: '/images/react.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:16, img: '/images/vue.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:17, img: '/images/gulp.png', isFlipped: true ,active:false},
+                {classname: 'Card--noFlipped', id:18, img: '/images/yarn.png', isFlipped: true ,active:false}
+
             ],
             openedCards: [],
             keepCards: [],
@@ -55,7 +60,6 @@ class Board extends React.Component {
         let count = this.state.count +1;
         let id = e.target.getAttribute('data-id');
         let img = e.target.getAttribute('value');
-        let classname = e.target.classList.item(1);
         openedCards.push(img);
         let {cards} = this.state;
         cards.map((f) => f.id === +id ? f.isFlipped = !f.isFlipped : f.isFlipped);
@@ -65,10 +69,10 @@ class Board extends React.Component {
                 if (openedCards[0] === openedCards[1]) {
                     keepCards.push(openedCards[0]);
                     keepCards.push(openedCards[1]);
+                    cards.map((a) => (a.img === openedCards[0] && a.img === openedCards[1]) ? a.active = true : "");
                     openedCards.pop();
                     openedCards.pop();
-                    cards.filter((f) => f.classname === classname ? "" : "")
-                        this.setState({cards});
+                    this.setState({cards});
                 }
                 else {
                     setTimeout(() => {
@@ -86,23 +90,30 @@ class Board extends React.Component {
         this.setState({cards})
     };
 
+    handleStart = () => {
+        document.location.reload(true);
+    };
+
     render() {
         let {cards} = this.state;
         return (
-            <div>
+            <div className="playground">
                 {cards.map((card, index) => {
                 return (
                 <Cards
-                    //class={}
                     key={index}
                     value={card.img}
                     open={this.state.openedCards}
                     keep={this.state.keepCards}
                     dataId={card.id}
                     flipped={card.isFlipped}
-                    handleClick={(e)=>this.handleClick(e)}/>);
+                    active={card.active}
+                    handleClick={(e)=>this.handleClick(e)}/>
+                    );
             })}
+            <button className="restart btn" onClick={this.handleStart}>Start Again</button>
             </div>
+
         )
     }
 }

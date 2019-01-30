@@ -11,6 +11,7 @@ class Cards extends React.Component {
     }
 
     render() {
+        let act = this.props.active ? 'active' : 'none';
         let classes = classNames(
             'flip-card',
             {'Card--noFlipped': !this.props.flipped},
@@ -19,7 +20,7 @@ class Cards extends React.Component {
 
         return (
             <div className="container">
-                <div className={classes} onClick={(e)=>this.props.handleClick(e)} data-id={this.props.dataId} value={this.props.value}>
+                <div className={classes + ' '+act} onClick={(e)=>this.props.handleClick(e)} data-id={this.props.dataId} value={this.props.value}>
                     <div className="front">X</div>
                     <div className="back">
                         <img src={this.props.value} alt="img"/>

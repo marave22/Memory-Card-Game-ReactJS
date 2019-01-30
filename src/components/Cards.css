@@ -49,6 +49,11 @@ div.container {
 .Card--noFlipped {
     transition: 0.6s;
 }
+.active{
+    transform-style: preserve-3d;
+    transition: 0.6s;
+    transform: rotateY(180deg) !important;
+}
 .flip-card *{
     pointer-events: none;
 }

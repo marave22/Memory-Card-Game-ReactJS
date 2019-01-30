@@ -1,7 +1,9 @@
-div.playground {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    perspective: 1000px;
-    margin-bottom: -15px;
+
+button.btn {
+    display: block;
+    margin-left: 2%;
+    margin-top: 3%;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
 }
