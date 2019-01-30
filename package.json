@@ -1,11 +1,11 @@
 {
-  "name": "memory_card_game_reactjs",
+  "name": "memory-card-game-reactjs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.2.1",
+    "classnames": "^2.2.6",
     "react": "^16.7.0",
-    "react-card-flip": "^0.3.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
   },

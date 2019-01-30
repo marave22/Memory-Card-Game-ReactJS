@@ -6,66 +6,20 @@ class Cards extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            cards: this.props.value,
-            openedCards: this.props.open,
-            keepCards: this.props.keep,
-            flipped: this.props.flipped
+            cards: this.props.value
         };
     }
-
-    componentWillMount() {
-        setTimeout(() => {
-            this.setState({
-                flipped: !this.state.flipped
-            })
-        }, 3000)
-    }
-
-    handleClick = (e) => {
-        e.preventDefault();
-        let flipped = this.state.flipped;
-        let openedCards = this.state.openedCards;
-        let keepCards = this.state.keepCards;
-        this.setState({
-            flipped: !flipped
-        });
-        if (!this.state.flipped) {
-            openedCards.push(this.props.value);
-            if (openedCards.length === 2) {
-                if (openedCards[0] === openedCards[1]) {
-                    keepCards.push(openedCards[0]);
-                    keepCards.push(openedCards[1]);
-                    openedCards.pop();
-                    openedCards.pop();
-                } else {
-                    setTimeout(() => {
-                        this.setState({
-                            flipped: !this.state.flipped
-                        });
-                        openedCards.pop();
-                        openedCards.pop();
-                    }, 600);
-                }
-            }
-        }
-        this.setState({
-            keepCards: keepCards
-        });
-        if (keepCards.length === 14) {
-            alert("You win! Start again? Press Button");
-        }
-    };
 
     render() {
         let classes = classNames(
             'flip-card',
-            {'Card--noFlipped': !this.state.flipped},
-            {'Card--flipped' : this.state.flipped}
+            {'Card--noFlipped': !this.props.flipped},
+            {'Card--flipped' : this.props.flipped},
         );
 
         return (
             <div className="container">
-                <div className={classes} onClick={(e) => this.handleClick(e)}>
+                <div className={classes} onClick={(e)=>this.props.handleClick(e)} data-id={this.props.dataId} value={this.props.value}>
                     <div className="front">X</div>
                     <div className="back">
                         <img src={this.props.value} alt="img"/>
