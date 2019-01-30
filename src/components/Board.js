@@ -64,7 +64,7 @@ class Board extends React.Component {
         let {cards} = this.state;
         cards.map((f) => f.id === +id ? f.isFlipped = !f.isFlipped : f.isFlipped);
         this.setState({cards,count});
-        if(count % 2 === 0) {
+
             if (openedCards.length === 2) {
                 if (openedCards[0] === openedCards[1]) {
                     keepCards.push(openedCards[0]);
@@ -77,14 +77,14 @@ class Board extends React.Component {
                 else {
                     setTimeout(() => {
                         cards.filter((f) => f.isFlipped = false);
-                        this.setState({cards, count})
+                        this.setState({cards})
                     }, 1000);
                     openedCards.pop();
                     openedCards.pop();
                 }
             }
-        }
-        if (keepCards.length === 14) {
+
+        if (keepCards.length === 18) {
             alert("You Win!!");
         }
         this.setState({cards})

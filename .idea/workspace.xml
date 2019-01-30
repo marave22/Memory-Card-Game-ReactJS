@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b33eadfb-4689-4fc3-8991-59317d50b2b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/gulp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Board.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cards.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cards.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cards.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,8 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Board.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-825">
-              <caret line="24" column="72" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
+            <state relative-caret-position="476">
+              <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -100,6 +95,7 @@
       <find>isFlipped</find>
       <find>false</find>
       <find>this.state.flipped</find>
+      <find>count</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;img className=&quot;imageClass&quot;</replace>
@@ -133,8 +129,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="827" />
-    <option name="width" value="1100" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -151,28 +147,6 @@
               <item name="memory_card_game_reactjs" type="b2602c69:ProjectViewProjectNode" />
               <item name="memory_card_game_reactjs" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="memory_card_game_reactjs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory_card_game_reactjs" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="memory_card_game_reactjs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory_card_game_reactjs" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="memory_card_game_reactjs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory_card_game_reactjs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="memory_card_game_reactjs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory_card_game_reactjs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -181,7 +155,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react_router" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -222,12 +196,12 @@
       <workItem from="1548582400140" duration="24513000" />
       <workItem from="1548742300796" duration="29941000" />
       <workItem from="1548828353410" duration="50000" />
-      <workItem from="1548828408003" duration="10528000" />
+      <workItem from="1548828408003" duration="12881000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101146000" />
+    <option name="totallyTimeSpent" value="103499000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -340,8 +314,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Board.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-825">
-          <caret line="24" column="72" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
+        <state relative-caret-position="476">
+          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
